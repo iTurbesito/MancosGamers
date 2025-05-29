@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Página Web</title>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -104,9 +104,20 @@
     <p>Mi nombre es Nahuel, joven apasionado por los videojuegos (y la electricidad). En esta página voy a tratar de mejorar tus habilidades y capacidades en algunos videojuegos, así dejas de pasar verguenza en tus partidas.</p>
 </section>
 
-<section class="fondo">
-    <h2>Contacto y formas de pago</h2>
-    <p>*IMAGEN EN PROCESO DE CREACION*</p>
+<section class="fondo" style="padding: 2rem; max-width: 600px; margin: auto;">
+<h2>Contacto</h2>
+<form>
+    <label for="nombre">Nombre y Apellido</label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" ><br>
+
+    <label for="asunto">Asunto</label><br>
+    <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" ><br>
+
+    <label for="mensaje">Mensaje</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí...""></textarea><br>
+
+    <button type="submit">Enviar</button>
+</form>
 </section>
 
 <footer>
@@ -132,5 +143,8 @@
     </ul>
     </div>
 </footer>
+</body>
+</html>
+
 </body>
 </html>
