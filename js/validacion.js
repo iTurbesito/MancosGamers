@@ -56,6 +56,6 @@ boton.addEventListener("click", function(event) {
     event.preventDefault();
     if(validarForm()){ 
         alert("Formulario enviado correctamente master, muchas gracias por tu mensaje");
-        window.open = "https://www.youtube.com/shorts/dGaCbQes3V0";
+        window.open = ("https://www.youtube.com/shorts/dGaCbQes3V0", "_blank");
     }
 });
