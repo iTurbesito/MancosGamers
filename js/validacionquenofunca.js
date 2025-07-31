@@ -1,3 +1,4 @@
+// Funcion que valida el formulario 
 function validarForm() {
     const nombre = document.getElementById("nombre").value;
     const email = document.getElementById("email").value;   
@@ -6,56 +7,62 @@ function validarForm() {
     let isValid = true;
 
     if(nombre.trim() === ""){
-        showError("empty-nombre", "El nombre no puede estar vacio");
+        showError("empty-nombre", "El nombre no puede estar vacio")
         isValid = false;
-    } else {
+    }   else {
         ocultarError("empty-nombre");
     }
+    
 
     if(email.trim() === ""){
         showError("empty-email", "El email no puede estar vacio");
         isValid = false;
-    } else {
+    }   else {
         ocultarError("empty-email");
     }
+    
 
     if(asunto.trim() === ""){
         showError("empty-asunto", "El asunto no puede estar vacio");
         isValid = false;
-    } else {
+    }   else  {
         ocultarError("empty-asunto");
     }
 
     if(mensaje.trim() === ""){
         showError("empty-mensaje", "El mensaje no puede estar vacio");
         isValid = false;
-    } else {
+    }   else  {
         ocultarError("empty-mensaje");
     }
 
-    return isValid; 
+    return isValid;
 }
+
+
 
 // Funcion que muestre los mensajes de error
 function showError(errorId, mensaje) {
-    const errorElement = document.getElementById(errorId);
+    const errorElement = document.getElementById(errorId + "-error");
     errorElement.textContent = "✖️ " + mensaje;
     errorElement.style.display = "block";
+    
 }
 
 // Funcion que oculte los mensajes 
+
 function ocultarError(errorId) {
-    const errorElement = document.getElementById(errorId);
-    errorElement.textContent = "";
+    const errorElement = document.getElementById(errorId + "-error");
     errorElement.style.display = "none";
 }
 
+
 // Utilidad para el boton
-const boton = document.getElementById("botonEnviar");
+const boton = document.getElementById("botonEnviar")
 boton.addEventListener("click", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita el envío del formulario
     if(validarForm()){ 
         alert("Formulario enviado correctamente master, muchas gracias por tu mensaje");
-        window.open = "https://www.youtube.com/shorts/dGaCbQes3V0";
+        window.location.href = "https://www.youtube.com/shorts/dGaCbQes3V0";
     }
 });
