@@ -107,16 +107,23 @@
 <section class="fondo" style="padding: 2rem; max-width: 600px; margin: auto;">
 <h2>Contacto</h2>
 <form>
+    <div id="empty-name"></div>
     <label for="nombre">Nombre y Apellido</label><br>
     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" ><br>
 
+    <div id="empty-email"></div>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Tu email" ><br>
+
+    <div id="empty-asunto"></div>
     <label for="asunto">Asunto</label><br>
     <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" ><br>
 
+    <div id="empty-mensaje"></div>
     <label for="mensaje">Mensaje</label><br>
     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí...""></textarea><br>
 
-    <button type="submit">Enviar</button>
+    <button type="submit" id="botonEnviar">Enviar</button>
 </form>
 </section>
 
@@ -143,8 +150,6 @@
     </ul>
     </div>
 </footer>
-</body>
-</html>
-
+<script src="js/validacion.js"></script>
 </body>
 </html>
